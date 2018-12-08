@@ -6,7 +6,7 @@
 	<div class="row">
 		<div class="container">
 			<div class="col col-lg-10">
-				<h1>Abonnement à la newsletter</h1>
+				<h1><strong>Abonnement à la newsletter</strong></h1>
 			</div>
 			<div class="col-lg-2">
 				<br><form action="index.php?target=adminConnexion" method="post">

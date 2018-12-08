@@ -8,12 +8,12 @@
 
 <div class="row">
 	<div class="container">
-		<div class="col col-lg-10">
-			<h1>Espace Administrateur</h1>
+		<div class="col col-lg-11">
+			<h1><strong>Espace Administrateur</strong> </h1>
 		</div>
-		<div class="col-lg-2">
-			<br><form action="index.php?target=adminConnexion" method="post">
-				<input class="btn btn-primary" type="submit" value="Espace Administrateur">
+		<div class="col-lg-1">
+			<br><form action="index.php" method="post">
+				<input class="btn btn-primary" type="submit" value="Retour">
 			</form>
 		</div>
 	</div>

@@ -23,13 +23,22 @@ try{
 		adminConnexion();
 	}
 
-	elseif (isset($_GET['log']) && $_GET['log'] == 'admin') {
-		if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
-			if ($_SESSION['login'] == 'admin' && $_SESSION['password'] == 'admin') {
-				adminMenu();
-			}else{
-				echo "L'identifiant ou le mot de passe sont erronés !";
+	elseif (isset($_GET['log'])) {
+		if ($_GET['log'] == 'admin') {
+			if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
+				if ($_SESSION['login'] == 'admin' && $_SESSION['password'] == 'admin') {
+					adminMenu();
+				}else{
+					echo "L'identifiant ou le mot de passe sont erronés !";
+				}
 			}
+			else{
+				echo "Vous n'êtes pas enregistré comme administrateur !";
+			}
+		}
+		elseif ($_GET['log'] == 'deconnect') {
+			session_destroy();
+			newsletterSubscription();
 		}
 	}
 	elseif (isset($_GET['action'])) {
