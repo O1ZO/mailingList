@@ -4,7 +4,20 @@
 
 <?php ob_start(); ?>
 
-<h1>Espace Administrateur</h1>
+<div class="row">
+	<div class="container">
+		<div class="col col-lg-10">
+			<h1><strong>Espace Administrateur</strong> </h1>
+		</div>
+		<div class="col-lg-2">
+			<br><form action="index.php?log=deconnect" method="post">
+				<input class="btn btn-primary" type="submit" value="Déconnexion">
+			</form>
+		</div>
+	</div>
+</div>
+
+<br>
 
 <a href="index.php?log=admin">Retour au menu administrateur</a>
 
