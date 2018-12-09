@@ -11,7 +11,7 @@ try{
 		addSubscriber($_POST['name'], $_POST['firstName'], $_POST['email'], $_POST['newsletter']);
 		sendMail($_POST['email'], 'Abonnement à la newsletter '.$_POST['newsletter'], "Bonjour !<br>Vous êtes bien abonné à la newsletter ".$_POST['newsletter'])." .";
 		echo ('<script>alert("Votre abonnement est bien enregistré !");</script>');
-		newsletterSubscription();
+		
 
 	}
 	if (isset($_POST['adminLog']) && isset($_POST['adminPass'])) {
