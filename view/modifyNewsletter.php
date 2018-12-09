@@ -21,7 +21,7 @@
 <br>
 
 <div class="container">
-	<a class="btn btn-primary btn-lg" href="index.php?action=listNewsletters">Retour à la liste des newsletter</a>
+	<a class="btn btn-primary btn-lg" href="index.php?action=listNewsletters">Retour à la Liste des Newsletter</a>
 </div><br>
 
 <div class="row">
@@ -29,21 +29,21 @@
 		<section class="col-lg-12">
 			<form class="well" action="index.php?action=updateNl&amp;id=<?= $getNewsletter['id'] ?>" method="post">
 				<fieldset>
-					<legend>Modifier le contenu d'une newsletter</legend>
+					<legend>Modifier le Contenu d'une Newsletter</legend>
 					<div class="form-group">
-						<label for= "newTitle"><strong>Nouveau titre : </strong></label>
+						<label for= "newTitle"><strong>Nouveau Titre : </strong></label>
 						<input class="form-control" type="text" name="newTitle" value="<?= htmlspecialchars($getNewsletter['title']) ?>">
 					</div>
 					<div class="form-group">
-						<label for= "newSubject"><strong>Nouveau sujet : </strong></label>
+						<label for= "newSubject"><strong>Nouveau Sujet : </strong></label>
 						<input class="form-control" type="text" name="newSubject" value="<?= htmlspecialchars($getNewsletter['subject']) ?>">
 					</div>
 					<div class="form-group">
-						<label for= "newContent"><strong>Nouveau contenu : </strong></label>
+						<label for= "newContent"><strong>Nouveau Contenu : </strong></label>
 						<textarea class="form-control" name="newContent" rows="10" cols="80"><?= htmlspecialchars($getNewsletter['content']) ?></textarea>
 					</div><br>
 					<div class="text-right">
-						<input class="btn btn-success" type="submit" value="Confirmer les changements"></input>
+						<input class="btn btn-success" type="submit" value="Confirmer les Changements"></input>
 					</div>
 				</fieldset>
 			</form>

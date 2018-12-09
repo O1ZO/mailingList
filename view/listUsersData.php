@@ -21,17 +21,17 @@
 <br>
 
 <div class="container">
-	<a class="btn btn-primary btn-lg" href="index.php?log=admin">Retour au menu administrateur</a>
+	<a class="btn btn-primary btn-lg" href="index.php?log=admin">Retour au Menu Administrateur</a>
 </div><br>
 
 <div class="container">
 	<div class="row">
 		<div class="col-lg-10">
-			<legend>Données des utilisateurs</legend>
+			<legend>Données des Utilisateurs</legend>
 		</div>
 		<div class="col-lg-2">
 			<form action="index.php?action=addUser" method="post">
-				<button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span> Ajouter un utilisateur</button>
+				<button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-plus"></span> Ajouter un Utilisateur</button>
 			</form>
 		</div>
 
@@ -45,7 +45,7 @@
 						<th>Prenom</th>
 						<th>E-mail</th>
 						<th>Mot de Passe</th>
-						<th>Abonné à la newsletter</th>
+						<th>Abonné à la Newsletter</th>
 						<th>Droits d'Administration</th>
 
 					</tr>

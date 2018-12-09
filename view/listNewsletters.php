@@ -21,11 +21,11 @@
 <br>
 
 <div class="container">
-	<a class="btn btn-primary btn-lg" href="index.php?log=admin">Retour au menu administrateur</a>
+	<a class="btn btn-primary btn-lg" href="index.php?log=admin">Retour au Menu Administrateur</a>
 </div><br>
 
 <div class="container">
-	<legend>Contenu des newsletters</legend>
+	<legend>Contenu des Newsletters</legend>
 
 	<div>
 		<table class="table table-bordered table-striped text-justify">
@@ -48,8 +48,8 @@
 						<td> <?php echo htmlspecialchars($getNewsletter['title']); ?> </td>
 						<td> <?php echo htmlspecialchars($getNewsletter['subject']); ?> </td>
 						<td> <?php echo htmlspecialchars($getNewsletter['content']); ?> </td>
-						<td><a class="btn btn-warning btn-sm" href="index.php?action=modifyNl&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td><a class="btn btn-success" href="index.php?action=listSubscribers&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-user"></span> Voir les abonnés</a></td>
+						<td><a class="btn btn-warning" href="index.php?action=modifyNl&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td><a class="btn btn-success" href="index.php?action=listSubscribers&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-user"></span> VOIR LES ABONNES</a></td>
 					</tr>
 				</tbody>
 				<?php

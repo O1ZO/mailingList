@@ -21,15 +21,15 @@
 <br>
 
 <div class="container">
-	<a class="btn btn-primary btn-lg" href="index.php?action=listUsersData">Retour à la liste des utilisateurs</a>
+	<a class="btn btn-primary btn-lg" href="index.php?action=listUsersData">Retour à la Liste des Utilisateurs</a>
 </div><br>
 
 <div class="row">
 	<div class="container">
 		<form class="well" action="index.php?action=add" method="post">
 			<fieldset class="col-lg-8">
-				<h3><strong>ID : Pas encore attribué</strong></h3><br>
-				<legend>Ajouter un utilisateur</legend>
+				<h3><strong>ID : non attribué</strong></h3><br>
+				<legend>Ajouter un Utilisateur</legend>
 				<div class="form-group">
 					<label for= "login"><strong>Pseudo : </strong></label>
 					<input class="form-control" type="text" name="login">
@@ -47,12 +47,12 @@
 					<input class="form-control" type="text" name="email">
 				</div>
 				<div class="form-group">
-					<label for= "password"><strong>Mot de passe : </strong></label>
+					<label for= "password"><strong>Mot de Passe : </strong></label>
 					<input class="form-control" type="text" name="password">
 				</div>
 			</fieldset>
 			<fieldset class="col-lg-4">
-				<legend>Choix de la newsletter : </legend>
+				<legend>Choix de la Newsletter : </legend>
 				<div class="radio">
 					<label for="newsletter">
 						<input type="radio" name="newsletter" value=1>
@@ -86,7 +86,7 @@
 				</div>
 			</fieldset>
 			<div class="text-right">
-				<input class="btn btn-success" type="submit" value="Ajouter un utilisateur"></input>
+				<input class="btn btn-success" type="submit" value="Ajouter un Utilisateur"></input>
 			</div>
 		</form>
 	</div>

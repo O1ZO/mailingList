@@ -23,10 +23,10 @@
 <div class="container">
 	<?php
 	if (isset($_GET['action']) && $_GET['action'] == 'modify' || $_GET['action'] == 'update') {
-		echo '<a class=" btn btn-primary btn-lg" href="index.php?action=listUsersData">Retour à la liste des utilisateurs</a>';
+		echo '<a class=" btn btn-primary btn-lg" href="index.php?action=listUsersData">Retour à la Liste des Utilisateurs</a>';
 	}
 	elseif (isset($_GET['nlId']) &&  $_GET['nlId'] > 0 && isset($_GET['action']) && $_GET['action'] == 'modifyFromNl' || $_GET['action'] == 'updateFromNl') {?>
-		<a class=" btn btn-primary btn-lg" href="index.php?action=listSubscribers&amp;nlId=<?= $_GET['nlId'] ?>">Retour à la liste des abonnés</a>
+		<a class=" btn btn-primary btn-lg" href="index.php?action=listSubscribers&amp;nlId=<?= $_GET['nlId'] ?>">Retour à la Liste des Abonnés</a>
 		<?php
 	}
 	?>
@@ -37,25 +37,25 @@
 		<form class= "well" action="<?php if(isset($_GET['action']) && $_GET['action'] == 'modify'){?>index.php?action=update&amp;id=<?= $user_data['id'];}elseif(isset($_GET['action']) && $_GET['action'] == 'modifyFromNl'){?>index.php?action=updateFromNl&amp;id=<?= $user_data['id']?><?php if(isset($_GET['nlId']) && $_GET['nlId'] > 0){?>&amp;nlId=<?= $_GET['nlId']	;};}?>" method="post">
 			<fieldset class="col-lg-8">
 				<h3><strong>ID : #<?= $user_data['id'] ?></strong></h3><br>
-				<legend>Modifier les données des utilisateurs</legend>
+				<legend>Modifier les Données des Utilisateurs</legend>
 				<div class="form-group">
-					<label for= "newLogin">Nouveau pseudo : </label>
+					<label for= "newLogin">Nouveau Pseudo : </label>
 					<input class="form-control" type="text" name="newLogin" value="<?= htmlspecialchars($user_data['login']) ?>">
 				</div>
 				<div class="form-group">
-					<label for= "newName">Nouveau nom : </label>
+					<label for= "newName">Nouveau Nom : </label>
 					<input class="form-control" type="text" name="newName" value="<?= htmlspecialchars($user_data['name']) ?>">
 				</div>
 				<div class="form-group">
-					<label for= "newFirstName">Nouveau prenom : </label>
+					<label for= "newFirstName">Nouveau Prenom : </label>
 					<input class="form-control" type="text" name="newFirstName" value="<?= htmlspecialchars($user_data['firstName']) ?>">
 				</div>
 				<div class="form-group">
-					<label for= "newEmail">Nouvel email : </label>
+					<label for= "newEmail">Nouvel Email : </label>
 					<input class="form-control" type="text" name="newEmail" value="<?= htmlspecialchars($user_data['email']) ?>">
 				</div>
 				<div class="form-group">
-					<label for= "newPassword">Nouveau mot de passe : </label>
+					<label for= "newPassword">Nouveau Mot de Passe : </label>
 					<input class="form-control" type="text" name="newPassword" value="<?= htmlspecialchars($user_data['password']) ?>">
 				</div>
 			</fieldset>
@@ -94,7 +94,7 @@
 				</div>
 			</fieldset>
 			<div class="text-right">
-			<input class="btn btn-success" type="submit" value="Confirmer les changements"></input>
+			<input class="btn btn-success" type="submit" value="Confirmer les Changements"></input>
 			</div>
 		</form>
 	</div>

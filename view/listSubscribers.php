@@ -21,18 +21,18 @@
 <br>
 
 <div class="container">
-	<a class="btn btn-primary btn-lg" href="index.php?action=listNewsletters">Retour à la liste des newsletters</a>
+	<a class="btn btn-primary btn-lg" href="index.php?action=listNewsletters">Retour à la Liste des Newsletters</a>
 </div><br>
 
 <div class="container">
 	<div class="row">
 		<div class="col-lg-10">
-			<legend>Abonnés à la newsletter n° <?= htmlspecialchars($getNewsletter['id']) ?></legend>
+			<legend>Abonnés à la Newsletter n° <?= htmlspecialchars($getNewsletter['id']) ?></legend>
 		</div>
 
 		<div class="col-lg-2">
 			<form action="" method="post">
-				<button class="btn btn-success btn-sm" type="submit" name="mailForm" ><span class="glyphicon glyphicon-send"></span><br><strong>Envoyer la newsletter</strong></button>
+				<button class="btn btn-success btn-sm" type="submit" name="mailForm" ><span class="glyphicon glyphicon-send"></span><br><strong>Envoyer la Newsletter</strong></button>
 			</form>
 		</div>
 	</div><br>
@@ -68,7 +68,7 @@
 			<?php
 		}
 		if (isset($_POST['mailForm'])) {
-			echo "<script>alert ('La newsletter à été correctement envoyée !');</script>";
+			echo "<script>alert ('La Newsletter à été correctement envoyée !');</script>";
 		}
 		?>
 	</table>
