@@ -26,16 +26,16 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-9">
+		<div class="col-lg-10">
 			<legend>Abonnés à la newsletter n° <?= htmlspecialchars($getNewsletter['id']) ?></legend>
 		</div>
 
-		<div class="col-lg-3">
+		<div class="col-lg-2">
 			<form action="" method="post">
-				<input class="btn btn-danger btn-sm" type="submit" name="mailForm" value="Envoyer la newsletter à tout les abonnés">
+				<button class="btn btn-success btn-sm" type="submit" name="mailForm" ><span class="glyphicon glyphicon-send"></span><br><strong>Envoyer la newsletter</strong></button>
 			</form>
 		</div>
-	</div>
+	</div><br>
 	
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -45,8 +45,6 @@
 				<th>Nom</th>
 				<th>Prenom</th>
 				<th>E-mail</th>
-				<th>Modifier</th>
-				<th>Supprimer</th>
 			</tr>
 		</thead>
 		<?php
@@ -63,8 +61,8 @@
 					<td> <?php echo htmlspecialchars($users['name']); ?> </td>
 					<td> <?php echo htmlspecialchars($users['firstName']); ?> </td>
 					<td> <?php echo htmlspecialchars($users['email']); ?> </td>
-					<td><a href="index.php?action=modifyFromNl&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>">Modifier</a></td>
-					<td><a href="index.php?action=remove&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>">Supprimer</a></td>
+					<td class="text-center"><a class="btn btn-warning btn-xs" href="index.php?action=modifyFromNl&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					<td class="text-center"><a class="btn btn-danger btn-xs" href="index.php?action=remove&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
 				</tr>
 			</tbody>
 			<?php

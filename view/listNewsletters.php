@@ -28,15 +28,14 @@
 	<legend>Contenu des newsletters</legend>
 
 	<div>
-		<table class="table table-bordered table-striped">
+		<table class="table table-bordered table-striped text-justify">
 			<thead>
 				<tr>
 					<th>ID</th>
 					<th>Sujet</th>
 					<th>Titre</th>
 					<th>Contenu</th>
-					<th>Modifier</th>
-					<th>Supprimer</th>
+
 				</tr>
 			</thead>
 			<?php
@@ -49,8 +48,8 @@
 						<td> <?php echo htmlspecialchars($getNewsletter['title']); ?> </td>
 						<td> <?php echo htmlspecialchars($getNewsletter['subject']); ?> </td>
 						<td> <?php echo htmlspecialchars($getNewsletter['content']); ?> </td>
-						<td><a href="index.php?action=modifyNl&amp;nlId=<?= $getNewsletter['id'] ?>">Modifier</a></td>
-						<td><a href="index.php?action=listSubscribers&amp;nlId=<?= $getNewsletter['id'] ?>">Voir les abonnés</a></td>
+						<td><a class="btn btn-warning btn-sm" href="index.php?action=modifyNl&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+						<td><a class="btn btn-success" href="index.php?action=listSubscribers&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-user"></span> Voir les abonnés</a></td>
 					</tr>
 				</tbody>
 				<?php
