@@ -40,9 +40,11 @@
 					</div>
 					<div class="form-group">
 						<label for= "newContent"><strong>Nouveau contenu : </strong></label>
-						<textarea class="form-control" name="newContent" rows="15" cols="80"><?= htmlspecialchars($getNewsletter['content']) ?></textarea>
+						<textarea class="form-control" name="newContent" rows="10" cols="80"><?= htmlspecialchars($getNewsletter['content']) ?></textarea>
 					</div><br>
-					<input class="btn btn-primary" type="submit" value="Confirmer les changements"></input>
+					<div class="text-right">
+						<input class="btn btn-success" type="submit" value="Confirmer les changements"></input>
+					</div>
 				</fieldset>
 			</form>
 		</section>
