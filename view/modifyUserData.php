@@ -17,16 +17,17 @@
 </div>
 
 <br>
-
+<div class="container">
 <?php
 if (isset($_GET['action']) && $_GET['action'] == 'modify' || $_GET['action'] == 'update') {
-	echo '<a href="index.php?action=listUsersData">Retour à la liste des utilisateurs</a>';
+	echo '<a class=" btn btn-primary btn-lg" href="index.php?action=listUsersData">Retour à la liste des utilisateurs</a>';
 }
 elseif (isset($_GET['nlId']) &&  $_GET['nlId'] > 0 && isset($_GET['action']) && $_GET['action'] == 'modifyFromNl' || $_GET['action'] == 'updateFromNl') {?>
-	<a href="index.php?action=listSubscribers&amp;nlId=<?= $_GET['nlId'] ?>">Retour à la liste des abonnés</a>
+	<a class=" btn btn-primary btn-lg" href="index.php?action=listSubscribers&amp;nlId=<?= $_GET['nlId'] ?>">Retour à la liste des abonnés</a>
 <?php
 }
 ?>
+</div>
 
 	<div>
 		<form action="<?php if(isset($_GET['action']) && $_GET['action'] == 'modify'){?>index.php?action=update&amp;id=<?= $user_data['id'];}elseif(isset($_GET['action']) && $_GET['action'] == 'modifyFromNl'){?>index.php?action=updateFromNl&amp;id=<?= $user_data['id']?><?php if(isset($_GET['nlId']) && $_GET['nlId'] > 0){?>&amp;nlId=<?= $_GET['nlId']	;};}?>" method="post">
