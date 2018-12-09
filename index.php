@@ -123,10 +123,16 @@ try{
 					}	
 				}
 			}
+			else
+			{
+				session_destroy();
+				newsletterSubscription();
+			}
 		}
 	}
 	
-	else{
+	else
+	{
 		newsletterSubscription();
 	}
 
