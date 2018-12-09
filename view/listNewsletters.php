@@ -49,7 +49,7 @@
 						<td> <?php echo htmlspecialchars($getNewsletter['subject']); ?> </td>
 						<td> <?php echo htmlspecialchars($getNewsletter['content']); ?> </td>
 						<td><a class="btn btn-warning" data-toggle="tooltip" title="Modifier" href="index.php?action=modifyNl&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-						<td><a class="btn btn-success" href="index.php?action=listSubscribers&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-user"></span> VOIR LES ABONNES</a></td>
+						<td><a class="btn btn-success" data-toggle="tooltip" title="Voir les Abonnés" href="index.php?action=listSubscribers&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-user"></span></a></td>
 					</tr>
 				</tbody>
 				<?php
