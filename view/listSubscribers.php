@@ -61,8 +61,8 @@
 					<td> <?php echo htmlspecialchars($users['name']); ?> </td>
 					<td> <?php echo htmlspecialchars($users['firstName']); ?> </td>
 					<td> <?php echo htmlspecialchars($users['email']); ?> </td>
-					<td class="text-center"><a class="btn btn-warning btn-xs" href="index.php?action=modifyFromNl&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-					<td class="text-center"><a class="btn btn-danger btn-xs" href="index.php?action=remove&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+					<td class="text-center"><a class="btn btn-warning btn-xs" data-toggle="tooltip" title="Modifier" href="index.php?action=modifyFromNl&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+					<td class="text-center"><a class="btn btn-danger btn-xs" data-toggle="tooltip" title="Supprimer de la Liste d'Abonnés" href="index.php?action=remove&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
 				</tr>
 			</tbody>
 			<?php

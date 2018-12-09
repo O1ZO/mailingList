@@ -72,8 +72,8 @@
 								}
 								?>
 							</td>
-							<td><a class="btn btn-warning btn-xs" href="index.php?action=modify&amp;id=<?= $users['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-							<td><a class="btn btn-danger btn-xs" href="index.php?action=delete&amp;id=<?= $users['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+							<td><a class="btn btn-warning btn-xs" data-toggle="tooltip" title="Modifier" href="index.php?action=modify&amp;id=<?= $users['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+							<td><a class="btn btn-danger btn-xs" data-toggle="tooltip" title="Supprimer Définitivement" href="index.php?action=delete&amp;id=<?= $users['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
 						</tr>
 					</tbody>
 					<?php
