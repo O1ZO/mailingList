@@ -5,27 +5,22 @@
 <?php ob_start(); ?>
 
 
+<div class="container ">
+	<nav class="navbar">
+		<h1><strong>Connexion à l'Espace d'Administration</strong> </h1>
 
-<div class="row">
-	<div class="container">
-		<div class="col col-lg-11">
-			<h1><strong>Connexion à l'Espace d'Administration</strong> </h1>
-		</div>
-		<div class="col-lg-1">
-			<br><form action="index.php" method="post">
-				<input class="btn btn-primary" type="submit" value="Retour">
-			</form>
-		</div>
-	</div>
+		<form action="index.php" method="post">
+			<input class="btn btn-outline-primary text-center" type="submit" value="Retour">
+		</form>
+	</nav>
 </div>
 
 <br>
 
+
 <div class="row">
-	<div class="container">
-		<section class="col-lg-12">
+	<div class="container bg-light border rounded shadow"><br>
 			<form class="well" action="index.php?log=admin" method="post">
-				<fieldset>
 					<legend>Veuillez entrer vos identifiants : </legend>
 					<div class="form-group">
 						<label for="adminLog"><strong>Pseudo : </strong></label>
@@ -35,10 +30,10 @@
 						<label for="adminPass"><strong>Mot de Passe : </strong></label>
 						<input class="form-control" type="password" name="adminPass">	
 					</div>
-				</fieldset><br>
-				<input class="btn btn-primary" type="submit" name="Connexion">
+					<div class="d-flex justify-content-center">
+						<input class="btn btn-success btn-lg shadow" type="submit" name="Connexion">
+					</div><br>
 			</form>
-		</section>
 	</div>
 </div>
 

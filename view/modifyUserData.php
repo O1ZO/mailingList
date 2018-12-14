@@ -4,17 +4,14 @@
 <?php ob_start();?>
 
 
-<div class="container">
-	<div class="row">
-		<div class="col col-lg-10">
-			<h1><strong>Espace Administrateur</strong> </h1>
-		</div>
-		<div class="col-lg-2">
-			<br><form action="index.php?log=deconnect" method="post">
-				<input class="btn btn-primary" type="submit" value="Déconnexion">
-			</form>
-		</div>
-	</div>
+<div class="container ">
+	<nav class="navbar">
+		<h1><strong>Espace Administrateur</strong> </h1>
+
+		<form action="index.php?log=deconnect" method="post">
+			<input class="btn btn-outline-primary text-center" type="submit" value="Déconnexion">
+		</form>
+	</nav>
 </div>
 
 <br>
@@ -32,11 +29,12 @@
 	?>
 </div><br>
 
-<div class="row">
-	<div class="container">
-		<form class= "well" action="<?php if(isset($_GET['action']) && $_GET['action'] == 'modify'){?>index.php?action=update&amp;id=<?= $user_data['id'];}elseif(isset($_GET['action']) && $_GET['action'] == 'modifyFromNl'){?>index.php?action=updateFromNl&amp;id=<?= $user_data['id']?><?php if(isset($_GET['nlId']) && $_GET['nlId'] > 0){?>&amp;nlId=<?= $_GET['nlId']	;};}?>" method="post">
-			<fieldset class="col-lg-8">
-				<h3><strong>ID : #<?= $user_data['id'] ?></strong></h3><br>
+<div class="container bg-light rounded shadow"><br>
+	<h3><strong>ID : <?= $user_data['id'] ?></strong></h3><br>
+	<div class="row">
+		<div class="col">
+			<form action="<?php if(isset($_GET['action']) && $_GET['action'] == 'modify'){?>index.php?action=update&amp;id=<?= $user_data['id'];}elseif(isset($_GET['action']) && $_GET['action'] == 'modifyFromNl'){?>index.php?action=updateFromNl&amp;id=<?= $user_data['id']?><?php if(isset($_GET['nlId']) && $_GET['nlId'] > 0){?>&amp;nlId=<?= $_GET['nlId']	;};}?>" method="post">
+			
 				<legend>Modifier les Données des Utilisateurs</legend>
 				<div class="form-group">
 					<label for= "newLogin">Nouveau Pseudo : </label>
@@ -58,8 +56,8 @@
 					<label for= "newPassword">Nouveau Mot de Passe : </label>
 					<input class="form-control" type="text" name="newPassword" value="<?= htmlspecialchars($user_data['password']) ?>">
 				</div>
-			</fieldset>
-			<fieldset class="col-lg-4">
+			</div>
+			<div class="col-auto mr-auto"><br><br><br>
 				<legend>Abonné à : </legend>
 				<div class="radio">
 					<label for="newNewsletterId">
@@ -90,14 +88,12 @@
 					<label for="adminRights">
 						<input type="radio" name="adminRights" value="non" <?php if($user_data['adminRights'] == 'non'){echo 'checked';} ?> >
 						Non
-					</label><br><br><br><br><br><br><br><br><br>
-				</div>
-			</fieldset>
-			<div class="text-right">
-			<input class="btn btn-success" type="submit" value="Confirmer les Changements"></input>
+					</label>
+				</div><br><br>
+				<input class="btn btn-success btn-lg shadow" type="submit" value="Confirmer les Changements"></input>
 			</div>
 		</form>
-	</div>
+	</div><br>
 </div>
 
 

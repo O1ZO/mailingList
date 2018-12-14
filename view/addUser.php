@@ -5,30 +5,29 @@
 <?php ob_start();?>
 
 
-<div class="container">
-	<div class="row">
-		<div class="col col-lg-10">
-			<h1><strong>Espace Administrateur</strong> </h1>
-		</div>
-		<div class="col-lg-2">
-			<br><form action="index.php?log=deconnect" method="post">
-				<input class="btn btn-primary" type="submit" value="Déconnexion">
-			</form>
-		</div>
-	</div>
+<div class="container ">
+	<nav class="navbar">
+		<h1><strong>Espace Administrateur</strong> </h1>
+
+		<form action="index.php?log=deconnect" method="post">
+			<input class="btn btn-outline-primary text-center" type="submit" value="Déconnexion">
+		</form>
+	</nav>
 </div>
 
 <br>
+
 
 <div class="container">
 	<a class="btn btn-primary btn-lg" href="index.php?action=listUsersData">Retour à la Liste des Utilisateurs</a>
 </div><br>
 
-<div class="row">
-	<div class="container">
-		<form class="well" action="index.php?action=add" method="post">
-			<fieldset class="col-lg-8">
-				<h3><strong>ID : non attribué</strong></h3><br>
+
+<div class="container bg-light border rounded shadow"><br>
+	<h3><strong>ID : non attribué</strong></h3><br>
+	<div class="row">
+		<div class="col">
+			<form action="index.php?action=add" method="post">
 				<legend>Ajouter un Utilisateur</legend>
 				<div class="form-group">
 					<label for= "login"><strong>Pseudo : </strong></label>
@@ -50,8 +49,8 @@
 					<label for= "password"><strong>Mot de Passe : </strong></label>
 					<input class="form-control" type="text" name="password">
 				</div>
-			</fieldset>
-			<fieldset class="col-lg-4">
+			</div>
+			<div class="col-auto mr-auto"><br><br><br>
 				<legend>Choix de la Newsletter : </legend>
 				<div class="radio">
 					<label for="newsletter">
@@ -82,14 +81,12 @@
 					<label for="adminRights">
 						<input type="radio" name="adminRights" value="non" checked>
 						Non
-					</label><br><br><br><br><br><br><br><br><br>
-				</div>
-			</fieldset>
-			<div class="text-right">
-				<input class="btn btn-success" type="submit" value="Ajouter un Utilisateur"></input>
+					</label>
+				</div><br><br>
+				<input class="btn btn-success btn-lg" type="submit" value="Ajouter un Utilisateur"></input>
 			</div>
 		</form>
-	</div>
+	</div><br>
 </div>
 
 

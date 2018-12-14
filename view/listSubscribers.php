@@ -5,17 +5,14 @@
 <?php ob_start();?>
 
 
-<div class="container">
-	<div class="row">
-		<div class="col col-lg-10">
-			<h1><strong>Espace Administrateur</strong> </h1>
-		</div>
-		<div class="col-lg-2">
-			<br><form action="index.php?log=deconnect" method="post">
-				<input class="btn btn-primary" type="submit" value="Déconnexion">
-			</form>
-		</div>
-	</div>
+<div class="container ">
+	<nav class="navbar">
+		<h1><strong>Espace Administrateur</strong> </h1>
+
+		<form action="index.php?log=deconnect" method="post">
+			<input class="btn btn-outline-primary text-center" type="submit" value="Déconnexion">
+		</form>
+	</nav>
 </div>
 
 <br>
@@ -26,18 +23,19 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-10">
+		<div class="col-auto mr-auto">
 			<legend>Abonnés à la Newsletter n° <?= htmlspecialchars($getNewsletter['id']) ?></legend>
 		</div>
 
-		<div class="col-lg-2">
+		<div class="col-auto">
 			<form action="" method="post">
-				<button class="btn btn-success btn-sm" type="submit" name="mailForm" ><span class="glyphicon glyphicon-send"></span><br><strong>Envoyer la Newsletter</strong></button>
+				<button class="btn btn-success btn-sm" type="submit" name="mailForm" ><span style="font-size: 1.5rem;" class="fab fa-telegram-plane"></span><br><strong>Envoyer la Newsletter</strong></button>
 			</form>
 		</div>
-	</div><br>
-	
-	<table class="table table-bordered table-striped">
+	</div>
+</div><br>
+<div class="container">
+	<table class="table table-bordered table-striped table-hover table-sm">
 		<thead>
 			<tr>
 				<th>ID</th>
@@ -61,8 +59,8 @@
 					<td> <?php echo htmlspecialchars($users['name']); ?> </td>
 					<td> <?php echo htmlspecialchars($users['firstName']); ?> </td>
 					<td> <?php echo htmlspecialchars($users['email']); ?> </td>
-					<td class="text-center"><a class="btn btn-warning btn-xs" data-toggle="tooltip" title="Modifier" href="index.php?action=modifyFromNl&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-					<td class="text-center"><a class="btn btn-danger btn-xs" data-toggle="tooltip" title="Supprimer de la Liste d'Abonnés" href="index.php?action=remove&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+					<td class="text-center"><a class="btn btn-warning btn-sm" data-toggle="tooltip" title="Modifier" href="index.php?action=modifyFromNl&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="fas fa-pen"></span></a></td>
+					<td class="text-center"><a class="btn btn-danger btn-sm" data-toggle="tooltip" title="Supprimer de la Liste d'Abonnés" href="index.php?action=remove&amp;id=<?= $users['id'] ?>&amp;nlId=<?= $getNewsletter['id'] ?>"><span class="fas fa-trash-alt"></span></a></td>
 				</tr>
 			</tbody>
 			<?php
